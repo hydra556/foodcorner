@@ -1,7 +1,19 @@
 import React from 'react'
 import './Card.css'
 
-const Card = ({cardData,cart,setcart}) => {
+const Card = ({cardData,cart,setCart}) => {
+
+  let addToCart = (product) => {
+    let newCart=[...cart];
+    let item = newCart.find((i)=>i.id===product.id);
+    if(item){
+      item.quantity ++ ;
+    }else{
+      newCart.push({...product,quantity:1});
+    }
+    setCart(newCart);
+
+  }
   return (
     <div className='card-container'>
       {cardData.length === 0 ? (<h1>No item found</h1>) : (
@@ -11,7 +23,7 @@ const Card = ({cardData,cart,setcart}) => {
           <img src={i.image} />
           <p>Very delicious {i.name}</p>
           <p className='price'>Price : &#8377; {i.price}</p>
-          <button>Add to cart</button>
+          <button onClick={()=>addToCart(i)}>Add to cart</button>
           </div>
       })
       )}

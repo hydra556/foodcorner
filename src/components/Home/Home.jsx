@@ -29,7 +29,7 @@ import Kesaribath from '../../assets/Kesaribath.jpg'
 import Card from '../Card/Card'
 import './Home.css'
 import { IoSearch } from "react-icons/io5";
-const Home = ({cart,setcart}) => {
+const Home = ({cart,setCart}) => {
 
   let [search,setSearch] = useState("")
 
@@ -212,7 +212,7 @@ const Home = ({cart,setcart}) => {
       </div>
 
     </div>
-    <Card cardData={filterData} cart={cart} setcart={setcart}/>
+    <Card cardData={filterData} cart={cart} setCart={setCart}/>
     </div>
   )
 

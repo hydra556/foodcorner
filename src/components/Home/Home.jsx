@@ -5,7 +5,7 @@ import Dhokla from '../../assets/Dhokla.jpg'
 import gulabjamun from '../../assets/gulabjamun.jpg'
 import Kachori from '../../assets/Kachori.jpg'
 import Kajukatli from '../../assets/Kajukatli.jpg'
-import Panipuri from '../../assets/Panipuri.jpg'
+import PaniPuri from '../../assets/PaniPuri.jpg'
 import Puranpoli from '../../assets/Puranpoli.jpg'
 import Rasgulla from '../../assets/Rasgulla.jpg'
 import Rasmalai from '../../assets/Rasmalai.jpg'
@@ -67,8 +67,8 @@ const Home = ({cart,setCart}) => {
     },
     {
       id:6,
-      name:"Panipuri",
-      image : Panipuri,
+      name:"PaniPuri",
+      image : PaniPuri,
       price :200
     },
     {
